@@ -1,38 +1,31 @@
 <template>
   <b-container>
     <b-form-input id="numberInput" v-model="display" type="text" class="mb-3"
-                   readonly></b-form-input>
-    <b-row>
-      <b-col cols="10">
-      <NumberPad v-on:pressed="numberPressed"/>
-      </b-col>
-      <b-col class="operators">
-        <b-button class="add-btn mb-1" variant="success">+</b-button>
-        <b-button class="subtract-btn mb-1" variant="success">-</b-button>
-        <b-button class="multiply-btn mb-1" variant="success">*</b-button>
-        <b-button class="divide-btn" variant="success">/</b-button>
-      </b-col>
-    </b-row>
-
+                  readonly></b-form-input>
+    <KeyPad v-on:pressed="numberPressed" v-on:calculate="onCalculate"/>
   </b-container>
 
 </template>
 
 <script>
-import NumberPad from '@/components/NumberPad'
+import KeyPad from '@/components/KeyPad'
+
 export default {
   name: 'Calculator',
-  components: { NumberPad },
-  data(){
+  components: { KeyPad },
+  data () {
     return {
-      display: ''
+      display: '',
     }
   },
-  methods:{
-    numberPressed(e){
+  methods: {
+    numberPressed (e) {
       this.display += '' + e
-    }
-  }
+    },
+    onCalculate () {
+      console.log(Function(this.display()))
+    },
+  },
 }
 </script>
 

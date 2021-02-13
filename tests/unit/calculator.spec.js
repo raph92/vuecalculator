@@ -11,10 +11,8 @@ describe("calculator.vue", () => {
     expect(wrapper.findAll('.number-btn').length).toBe(10)
   });
   it("has 4 arithmetic operations", ()=>{
-    expect(wrapper.find('.add-btn').exists()).toBe(true)
-    expect(wrapper.find('.divide-btn').exists()).toBe(true)
-    expect(wrapper.find('.subtract-btn').exists()).toBe(true)
-    expect(wrapper.find('.multiply-btn').exists()).toBe(true)
+    expect(wrapper.findAll('.operation-btn').length).toBe(4)
+
   });
   it("responds when a number is clicked", async ()=>{
     wrapper.find('[data-number="7"]').trigger('click')
