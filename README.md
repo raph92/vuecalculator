@@ -1,5 +1,8 @@
 # vuecalculator
 
+# Screenshot
+<img src="https://i.imgur.com/rCayZ7F.png" height="400" />
+
 ## Project setup
 ```
 yarn install
