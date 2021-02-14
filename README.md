@@ -1,7 +1,7 @@
 # vuecalculator
 
 # Screenshot
-<img src="https://i.imgur.com/rCayZ7F.png" height="400" />
+<img src="https://i.imgur.com/rCayZ7F.png" height="400"  alt="A screenshot"/>
 
 ## Project setup
 ```
