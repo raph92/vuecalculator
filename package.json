@@ -14,7 +14,8 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "flush-promises": "^1.0.2",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-keypress": "^2.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -62,6 +63,8 @@
   ],
   "jest": {
     "preset": "@vue/cli-plugin-unit-jest",
-    "setupFiles": ["./tests/unit/setup.js"]
+    "setupFiles": [
+      "./tests/unit/setup.js"
+    ]
   }
 }
